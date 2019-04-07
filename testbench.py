@@ -177,7 +177,7 @@ def printCases(fileName, inputDict, inputs, time):
         
         fileName.write("\n\t\t" + time + "\t\t")
 
-def generateBinary(FileName, inputs, inputDict, inputLoc):
+def generateBinary(fileName, inputs, inputDict, inputLoc):
     for item in inputs:
             #generate the binary value to be assigned to the input (e.g. 3'b010)
             inputDict[inputs[inputLoc]]["binVal"] = str(inputDict[inputs[inputLoc]]["length"])
