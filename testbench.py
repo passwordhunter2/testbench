@@ -174,21 +174,7 @@ def printCases(fileName, inputDict, inputs, time):
         inputDict[inputs[incLoc]]["value"] += 1 #increment the counter found to not be at its max
         inputLoc = 0
         generateBinary(fileName, inputs, inputDict, inputLoc)
-        '''for item in inputs:
-            #generate the binary value to be assigned to the input (e.g. 3'b010)
-            inputDict[inputs[inputLoc]]["binVal"] = str(inputDict[inputs[inputLoc]]["length"])
-            inputDict[inputs[inputLoc]]["binVal"] += "'b"
-            binaryValue = bin(inputDict[inputs[inputLoc]]["value"])[2:]
-            #finds the binary equivalent of the value expressed in as few digits as possible
-
-            while len(binaryValue) < int(inputDict[inputs[inputLoc]]["length"]):
-            #appends zeros to the front of the binary value until its size is equivalent to the
-            #number of bits of its corresponding input
-                binaryValue = "0" + binaryValue
-            inputDict[inputs[inputLoc]]["binVal"] += binaryValue
-            fileName.write(item + " = " + inputDict[inputs[inputLoc]]["binVal"] + "; ")
-            inputLoc += 1'''
-
+        
         fileName.write("\n\t\t" + time + "\t\t")
 
 def generateBinary(FileName, inputs, inputDict, inputLoc):
